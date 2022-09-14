@@ -37,7 +37,7 @@ const options = {
     if (selectedDates[0] < options.defaultDate) {
       refs.btnStart.disabled = true;
       Notify.failure('Please choose a date in the future');
-      // window.alert('Please choose a date in the future');
+
       return;
     }
     refs.btnStart.disabled = false;
@@ -63,7 +63,7 @@ function onStartClick() {
     if (timeRange < 1000) {
       clearInterval(timer);
       Notify.success('Congrats, time is up!');
-      // console.log('Время вышло')
+
       return;
     }
   }, 1_000);
